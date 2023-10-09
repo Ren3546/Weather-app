@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel = "stylesheet" href = "assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <section class = "main">
+    <section class = "search bar container">
+        <h2>Search for a city</h2>
+        <form method = "POST" id = "form">
+            <input type = "text" name = "text" id = "text" placeholder = "Enter city name">
+            <button id ="submit">Search</button>
+        </form>
+        <p>Search History:</p>
+            <ul id ="cityList">
+                
+            </ul>
+    </section>
+
+    <section class = "info">
+        <div>
+            <div id = "today" class = "capitalize"></div>
+            <ul id = "weatherInfo"></ul>
+        </div>
+    </section>
+</section>
+
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src = "assets/script.js"></script>
+</body>
+</html>

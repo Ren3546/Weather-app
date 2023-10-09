@@ -1,0 +1,44 @@
+* {
+    list-style-type: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.capitalize {
+    text-transform:capitalize;
+}
+
+#today {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.five {
+    display:flex;
+    justify-content:space-evenly;
+}
+
+#cityList {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    max-width: 500px;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
