@@ -1,5 +1,7 @@
 * {
     list-style-type: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: lightgreen
 }
 
 header {
@@ -22,6 +24,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size:14px;
 }
 
 .main {
@@ -41,4 +44,11 @@ header {
     max-width: 500px;
     flex-wrap: wrap;
     justify-content:space-between;
+}
+
+header {
+    background-color:aqua;
+}
+h1 {
+    background-color:inherit;
 }

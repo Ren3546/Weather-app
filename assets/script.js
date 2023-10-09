@@ -255,6 +255,17 @@ function cityWeather() {
         weatherInfo5.append(currentHumid5)
         weatherInfo5.append(currentWind5)
 
+        document.getElementById("day1").style.border = "solid";
+        document.getElementById("day1").style.borderRadius = "25px";
+        document.getElementById("day2").style.border = "solid";
+        document.getElementById("day2").style.borderRadius = "25px";
+        document.getElementById("day3").style.border = "solid";
+        document.getElementById("day3").style.borderRadius = "25px";
+        document.getElementById("day4").style.border = "solid";
+        document.getElementById("day4").style.borderRadius = "25px";
+        document.getElementById("day5").style.border = "solid";
+        document.getElementById("day5").style.borderRadius = "25px";
+
 
     })
 }    
