@@ -4,6 +4,15 @@ let cityName;
 let cityList = document.getElementById(`cityList`)
 let cityLat;
 let cityLong;
+let todayWeather = document.getElementById(`today`)
+let weatherInfo = document.getElementById(`weatherInfo`)
+let objCity = [];
+
+submitBut.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.cityName = document.querySelector("#text").value;
+    searchCity();
+});
 
 function searchCity() {
     let cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${window.cityName}&appid=da832868abbc7d70cf172f64bd93e3d6`
@@ -12,6 +21,22 @@ function searchCity() {
     .then(function (data) {
         window.cityLat = data[0].lat;
         window.cityLong = data[0].lon;
+
+        let cityPart = document.createElement('li')
+        
+    
+        cityPart.textContent = window.cityName;
+        cityList.append(cityPart)
+    
+        var newObj = window.cityName
+    
+        objCity.push(newObj)
+    
+        localStorage.setItem(`cities`, JSON.stringify(objCity))
+
+        $(todayWeather).empty();
+        $(weatherInfo).empty();
+    
     cityWeather()
     })
 }
