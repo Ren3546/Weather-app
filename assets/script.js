@@ -7,6 +7,24 @@ let cityLong;
 let todayWeather = document.getElementById(`today`)
 let weatherInfo = document.getElementById(`weatherInfo`)
 let objCity = [];
+var cityOld = JSON.parse(localStorage.getItem('cities'))
+
+renderList();
+
+function renderList() {
+
+if (cityOld !== null) {
+    for (var i = 0; i < cityOld.length; i++) {
+        var todo = cityOld[i];
+    
+        var li = document.createElement("li");
+        li.textContent = todo;
+        li.setAttribute("data-index", i);
+    
+        cityList.appendChild(li);
+      }
+}
+}
 
 submitBut.addEventListener("click", function(event) {
     event.preventDefault();
