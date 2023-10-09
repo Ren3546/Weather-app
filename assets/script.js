@@ -32,6 +32,24 @@ submitBut.addEventListener("click", function(event) {
     searchCity();
 });
 
+cityList.addEventListener("click", function(event) {
+    window.cityName = event.target.innerHTML
+    $(todayWeather).empty();
+    $(weatherInfo).empty();
+    $(todayWeather1).empty();
+    $(weatherInfo1).empty();
+    $(todayWeather2).empty();
+    $(weatherInfo2).empty();
+    $(todayWeather3).empty();
+    $(weatherInfo3).empty();
+    $(todayWeather4).empty();
+    $(weatherInfo4).empty();
+    $(todayWeather5).empty();
+    $(weatherInfo5).empty();
+
+    searchCity();
+});
+
 function searchCity() {
     let cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${window.cityName}&appid=da832868abbc7d70cf172f64bd93e3d6`
     fetch(cityUrl)
@@ -54,8 +72,18 @@ function searchCity() {
 
         $(todayWeather).empty();
         $(weatherInfo).empty();
+        $(todayWeather1).empty();
+        $(weatherInfo1).empty();
+        $(todayWeather2).empty();
+        $(weatherInfo2).empty();
+        $(todayWeather3).empty();
+        $(weatherInfo3).empty();
+        $(todayWeather4).empty();
+        $(weatherInfo4).empty();
+        $(todayWeather5).empty();
+        $(weatherInfo5).empty();
     
-    cityWeather()
+        cityWeather()
     })
 }
 
