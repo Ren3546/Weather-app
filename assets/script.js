@@ -29,6 +29,18 @@ if (cityOld !== null) {
 submitBut.addEventListener("click", function(event) {
     event.preventDefault();
     window.cityName = document.querySelector("#text").value;
+    $(todayWeather).empty();
+    $(weatherInfo).empty();
+    $(todayWeather1).empty();
+    $(weatherInfo1).empty();
+    $(todayWeather2).empty();
+    $(weatherInfo2).empty();
+    $(todayWeather3).empty();
+    $(weatherInfo3).empty();
+    $(todayWeather4).empty();
+    $(weatherInfo4).empty();
+    $(todayWeather5).empty();
+    $(weatherInfo5).empty();
     searchCity();
 });
 
@@ -70,19 +82,6 @@ function searchCity() {
     
         localStorage.setItem(`cities`, JSON.stringify(objCity))
 
-        $(todayWeather).empty();
-        $(weatherInfo).empty();
-        $(todayWeather1).empty();
-        $(weatherInfo1).empty();
-        $(todayWeather2).empty();
-        $(weatherInfo2).empty();
-        $(todayWeather3).empty();
-        $(weatherInfo3).empty();
-        $(todayWeather4).empty();
-        $(weatherInfo4).empty();
-        $(todayWeather5).empty();
-        $(weatherInfo5).empty();
-    
         cityWeather()
     })
 }
