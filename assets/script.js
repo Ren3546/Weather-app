@@ -123,5 +123,102 @@ function cityWeather() {
         weatherInfo.append(currentHumid)
         weatherInfo.append(currentWind)
 
+        let iconId2 = data.list[16].weather[0].icon
+        let weatherIcon2 = `https://openweathermap.org/img/wn/${iconId2}@2x.png`
+
+        let iconPic2 = document.createElement(`img`)
+        iconPic2.setAttribute(`src`, weatherIcon2)
+
+        let currentDate2 = document.createElement(`H2`)
+        currentDate2.textContent = "(" + data.list[16].dt_txt +")"
+
+        let currentTemp2 = document.createElement(`li`)
+        currentTemp2.textContent = "Temp: " + data.list[16].main.temp +"°C"
+
+        let currentHumid2 = document.createElement(`li`)
+        currentHumid2.textContent = "Humidity: " + data.list[16].main.humidity + "%"
+
+        let currentWind2= document.createElement(`li`)
+        currentWind2.textContent = "Wind Speed: " + data.list[16].wind.speed + "km/h"
+
+        todayWeather2.append(currentDate2)
+        todayWeather2.append(iconPic2)
+        weatherInfo2.append(currentTemp2)
+        weatherInfo2.append(currentHumid2)
+        weatherInfo2.append(currentWind2)
+
+        let iconId3 = data.list[24].weather[0].icon
+        let weatherIcon3 = `https://openweathermap.org/img/wn/${iconId3}@2x.png`
+
+        let iconPic3 = document.createElement(`img`)
+        iconPic3.setAttribute(`src`, weatherIcon3)
+
+        let currentDate3 = document.createElement(`H2`)
+        currentDate3.textContent = "(" + data.list[24].dt_txt +")"
+
+        let currentTemp3 = document.createElement(`li`)
+        currentTemp3.textContent = "Temp: " + data.list[24].main.temp +"°C"
+
+        let currentHumid3 = document.createElement(`li`)
+        currentHumid3.textContent = "Humidity: " + data.list[24].main.humidity + "%"
+
+        let currentWind3= document.createElement(`li`)
+        currentWind3.textContent = "Wind Speed: " + data.list[24].wind.speed + "km/h"
+
+        todayWeather3.append(currentDate3)
+        todayWeather3.append(iconPic3)
+        weatherInfo3.append(currentTemp3)
+        weatherInfo3.append(currentHumid3)
+        weatherInfo3.append(currentWind3)
+
+        let iconId4 = data.list[32].weather[0].icon
+        let weatherIcon4 = `https://openweathermap.org/img/wn/${iconId4}@2x.png`
+
+        let iconPic4 = document.createElement(`img`)
+        iconPic4.setAttribute(`src`, weatherIcon4)
+
+        let currentDate4 = document.createElement(`H2`)
+        currentDate4.textContent = "(" + data.list[32].dt_txt +")"
+
+        let currentTemp4 = document.createElement(`li`)
+        currentTemp4.textContent = "Temp: " + data.list[32].main.temp +"°C"
+
+        let currentHumid4 = document.createElement(`li`)
+        currentHumid4.textContent = "Humidity: " + data.list[32].main.humidity + "%"
+
+        let currentWind4= document.createElement(`li`)
+        currentWind4.textContent = "Wind Speed: " + data.list[32].wind.speed + "km/h"
+
+        todayWeather4.append(currentDate4)
+        todayWeather4.append(iconPic4)
+        weatherInfo4.append(currentTemp4)
+        weatherInfo4.append(currentHumid4)
+        weatherInfo4.append(currentWind4)
+
+        let iconId5 = data.list[39].weather[0].icon
+        let weatherIcon5 = `https://openweathermap.org/img/wn/${iconId5}@2x.png`
+
+        let iconPic5 = document.createElement(`img`)
+        iconPic5.setAttribute(`src`, weatherIcon5)
+
+        let currentDate5 = document.createElement(`H2`)
+        currentDate5.textContent = "(" + data.list[39].dt_txt +")"
+
+        let currentTemp5 = document.createElement(`li`)
+        currentTemp5.textContent = "Temp: " + data.list[39].main.temp +"°C"
+
+        let currentHumid5 = document.createElement(`li`)
+        currentHumid5.textContent = "Humidity: " + data.list[39].main.humidity + "%"
+
+        let currentWind5= document.createElement(`li`)
+        currentWind5.textContent = "Wind Speed: " + data.list[39].wind.speed + "km/h"
+
+        todayWeather5.append(currentDate5)
+        todayWeather5.append(iconPic5)
+        weatherInfo5.append(currentTemp5)
+        weatherInfo5.append(currentHumid5)
+        weatherInfo5.append(currentWind5)
+
+
     })
 }    
