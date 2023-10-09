@@ -5,9 +5,22 @@ let cityList = document.getElementById(`cityList`)
 let cityLat;
 let cityLong;
 let todayWeather = document.getElementById(`today`)
+let todayWeather1 = document.getElementById(`today1`)
+let todayWeather2 = document.getElementById(`today2`)
+let todayWeather3 = document.getElementById(`today3`)
+let todayWeather4 = document.getElementById(`today4`)
+let todayWeather5 = document.getElementById(`today5`)
+
 let weatherInfo = document.getElementById(`weatherInfo`)
+let weatherInfo1 = document.getElementById(`weatherInfo1`)
+let weatherInfo2 = document.getElementById(`weatherInfo2`)
+let weatherInfo3 = document.getElementById(`weatherInfo3`)
+let weatherInfo4 = document.getElementById(`weatherInfo4`)
+let weatherInfo5 = document.getElementById(`weatherInfo5`)
+
 let objCity = [];
 var cityOld = JSON.parse(localStorage.getItem('cities'))
+
 
 renderList();
 
