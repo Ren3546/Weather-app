@@ -24,8 +24,8 @@ var cityOld = JSON.parse(localStorage.getItem('cities'))
 
 renderList();
 
+//function to pull up list of cities in search history from local storage on page load
 function renderList() {
-
 if (cityOld !== null) {
     for (var i = 0; i < cityOld.length; i++) {
         var todo = cityOld[i];
@@ -39,6 +39,7 @@ if (cityOld !== null) {
 }
 }
 
+//event listener for search bar 
 submitBut.addEventListener("click", function(event) {
     event.preventDefault();
     window.cityName = document.querySelector("#text").value;
@@ -57,6 +58,7 @@ submitBut.addEventListener("click", function(event) {
     searchCity();
 });
 
+//event listener for list items in search history
 cityList.addEventListener("click", function(event) {
     window.cityName = event.target.innerHTML
     $(todayWeather).empty();
@@ -75,6 +77,7 @@ cityList.addEventListener("click", function(event) {
     searchCity();
 });
 
+//function to grab city's latitude and longitude, make a new list item in search history, adds city to local storage.
 function searchCity() {
     let cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${window.cityName}&appid=da832868abbc7d70cf172f64bd93e3d6`
     fetch(cityUrl)
@@ -99,9 +102,8 @@ function searchCity() {
     })
 }
 
+//grabs weather info of city from its latitude and longitude and pushes the info in its respective container (current date and 5 day forecast)
 function cityWeather() {
-    
-
     let cityWeUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${window.cityLat}&lon=${window.cityLong}&units=metric&appid=da832868abbc7d70cf172f64bd93e3d6`
     fetch(cityWeUrl)
     .then(response => response.json())
@@ -254,7 +256,7 @@ function cityWeather() {
         weatherInfo5.append(currentTemp5)
         weatherInfo5.append(currentHumid5)
         weatherInfo5.append(currentWind5)
-
+//code to add styling to the weather info containers
         document.getElementById("day1").style.border = "solid";
         document.getElementById("day1").style.borderRadius = "25px";
         document.getElementById("day2").style.border = "solid";
