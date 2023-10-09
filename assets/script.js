@@ -123,6 +123,30 @@ function cityWeather() {
         weatherInfo.append(currentHumid)
         weatherInfo.append(currentWind)
 
+        let iconId1 = data.list[8].weather[0].icon
+        let weatherIcon1 = `https://openweathermap.org/img/wn/${iconId1}@2x.png`
+
+        let iconPic1 = document.createElement(`img`)
+        iconPic1.setAttribute(`src`, weatherIcon1)
+
+        let currentDate1 = document.createElement(`H2`)
+        currentDate1.textContent = "(" + data.list[8].dt_txt +")"
+
+        let currentTemp1 = document.createElement(`li`)
+        currentTemp1.textContent = "Temp: " + data.list[8].main.temp +"°C"
+
+        let currentHumid1 = document.createElement(`li`)
+        currentHumid1.textContent = "Humidity: " + data.list[8].main.humidity + "%"
+
+        let currentWind1= document.createElement(`li`)
+        currentWind1.textContent = "Wind Speed: " + data.list[8].wind.speed + "km/h"
+
+        todayWeather1.append(currentDate1)
+        todayWeather1.append(iconPic1)
+        weatherInfo1.append(currentTemp1)
+        weatherInfo1.append(currentHumid1)
+        weatherInfo1.append(currentWind1)
+
         let iconId2 = data.list[16].weather[0].icon
         let weatherIcon2 = `https://openweathermap.org/img/wn/${iconId2}@2x.png`
 
