@@ -5,6 +5,17 @@ let cityList = document.getElementById(`cityList`)
 let cityLat;
 let cityLong;
 
+function searchCity() {
+    let cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${window.cityName}&appid=da832868abbc7d70cf172f64bd93e3d6`
+    fetch(cityUrl)
+    .then(response => response.json())
+    .then(function (data) {
+        window.cityLat = data[0].lat;
+        window.cityLong = data[0].lon;
+    cityWeather()
+    })
+}
+
 function cityWeather() {
     
 
